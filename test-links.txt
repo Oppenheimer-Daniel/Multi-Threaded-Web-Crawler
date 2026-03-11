@@ -1,0 +1,10 @@
+Please paste your list of test URLs below:
+https://www.eulerity.com/
+https://www.youtube.com/
+https://www.claudiahazelphotography.com/Wedding-Portfolio/ - Fails for 403 error
+https://www.claudiahazelphotography.com/
+https://sit.instructure.com/ - Fails for 403 error
+https://jsoup.org/ - Fails for 403 error
+https://www.stevens.edu/
+https://en.wikipedia.org/wiki/Computer_science
+"" - empty string gives "Please enter a URL!"

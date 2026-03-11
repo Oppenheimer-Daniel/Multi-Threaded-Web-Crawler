@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Threaded ImageFinder | Photo Crawler</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>Multi-Threaded<span class="accent">ImageFinder</span></h1>
+	</div>
+	<div class="description">
+		<h2>How it works</h2>
+		<ul>
+			<li>Pressing the submit button on this page will make a POST
+				request to /main</li>
+			<li>That request will contain a form parameter with the url
+				populated in the input box below</li>
+			<li>The ImageFinder servlet will respond to the request with a
+				list of image urls</li>
+			<li>This page contains javascript to send the request and use the
+				response to build a list of images</li>
+		</ul>
+		<h2>My Additions</h2>
+		<ul>
+			<li>ImageFinder now has crawling capabilities</li>
+			<li>ImageFinder now handles errors gracefully</li>
+			<li>ImageFinder now uses a thread pool for concurrent crawling</li>
+			<li>I also added proper error handling for IO exceptions and interrupted exceptions</li>
+			<li>Heres the updated ImageFinder class with the new features:</li>
+		</ul>
+	</div>
+
+	<main class="container">
+		<h1>Multi-Threaded<span class="accent">ImageFinder</span></h1>
+		<p class="description">Enter a URL to crawl and discover all hosted images instantly.</p>
+
+		<section class="glass-card">
+			<div class="input-group">
+				<input type="text" id="url-input" name="url" placeholder="https://example.com">
+				<button type="button" id="submit-btn">Start Crawl</button>
+			</div>
+			<div id="status-message" class="status-bar">Ready to scan...</div>
+		</section>
+
+		<ul id="image-list" class="results"></ul>
+	</main>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
